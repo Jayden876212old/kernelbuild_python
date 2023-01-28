@@ -1,5 +1,7 @@
 import re
 import subprocess
+import requests
+
 latest_kernel_ver = subprocess.check_output(['pacman', '-Ss', 'linux'])
 latest_kernel_ver = str(latest_kernel_ver)
 a, b = latest_kernel_ver.find('core/linux '), latest_kernel_ver.find('.arch')
